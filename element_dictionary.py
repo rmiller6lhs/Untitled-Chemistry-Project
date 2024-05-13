@@ -6,6 +6,8 @@ Created on Mon May 13 11:14:11 2024
 @author: richardmiller
 
 Creates dictionary with information about each element
+
+!!!!NOT FOR USE IN PRODUCTION!!!!
 """
 #Import packages to namespace
 import os
