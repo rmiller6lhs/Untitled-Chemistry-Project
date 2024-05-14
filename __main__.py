@@ -1,9 +1,8 @@
 import json
-import re
 import os
-import numpy as np
+import re
 import pandas as pd
+import numpy as np
 
 if __name__ == '__main__':
-    from .input_processor import InputProcessor
-    from .calculator import Calculator
+    from .processors import InputProcessor

@@ -1,17 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 13 13:36:50 2024
-
-@author: richardmiller
-"""
 import re
 class InputProcessor:
     
     def __init__(self,formula):
         #Self declarations
         self.formula = formula
-        self.element_counts = {}
+        self.molecule_data = {}
         
         #Call preprocesser
         self.input_preprocesser()
@@ -124,12 +117,12 @@ class InputProcessor:
                     all_elements[idx][2] = 1
                     
                     
-        #Check self.element_counts dictionary to see if elements has been counted
+        #Check self.molecule_data dictionary to see if elements has been counted
         #Insert elements and count OR update element counts
         for symbol,*_,count in all_elements:
-            if symbol in self.element_counts.keys():
-                self.element_counts[symbol] += count
+            if symbol in self.molecule_data.keys():
+                self.molecule_data[symbol] += count
             else:
-                self.element_counts[symbol] = count
+                self.molecule_data[symbol] = count
                     
                     
