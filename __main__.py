@@ -6,3 +6,4 @@ import pandas as pd
 
 if __name__ == '__main__':
     from .input_processor import InputProcessor
+    from .calculator import Calculator
