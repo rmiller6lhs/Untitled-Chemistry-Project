@@ -4,7 +4,7 @@ class InputProcessor:
     def __init__(self,formula):
         #Self declarations
         self.formula = formula
-        self.molecule_data = {}
+        self.element_counts = {}
         
         #Call preprocesser
         self.input_preprocesser()
@@ -117,12 +117,12 @@ class InputProcessor:
                     all_elements[idx][2] = 1
                     
                     
-        #Check self.molecule_data dictionary to see if elements has been counted
+        #Check self.element_counts dictionary to see if elements has been counted
         #Insert elements and count OR update element counts
         for symbol,*_,count in all_elements:
-            if symbol in self.molecule_data.keys():
-                self.molecule_data[symbol] += count
+            if symbol in self.element_counts.keys():
+                self.element_counts[symbol] += count
             else:
-                self.molecule_data[symbol] = count
+                self.element_counts[symbol] = count
                     
                     

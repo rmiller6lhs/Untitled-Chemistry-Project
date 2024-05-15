@@ -6,7 +6,7 @@ class BaseCalculator:
     def __init__(self,formula):
         #Self declarations
         self.formula = formula
-        self.molecule_data = InputProcessor(self.formula).molecule_data
+        self.molecule_data = InputProcessor(self.formula).element_counts
         
         #Call simple calculators
         self.molar_mass()
